@@ -3,6 +3,8 @@ from django.contrib import messages
 from django.contrib.admin import AdminSite
 from django.contrib.contenttypes.models import ContentType
 from django.http import HttpResponseRedirect
+# from rgc.widgets import RichTextEditorWidget
+from django.utils.html import format_html
 
 from rgc.models import Person
 
@@ -12,30 +14,39 @@ admin.site.disable_action('delete_selected')
 
 @admin.register(Person)
 class PersonAdmin(admin.ModelAdmin):
+	# http://www.liujiangblog.com/course/django/158  自定制Admin
+	prepopulated_fields = {'url': ('name',)}
+	list_filter = ('name', 'age', 'bool')
 	list_per_page = 10
-	list_display = ['name', 'age', 'other', 'time']
+	list_display = ['name', 'age', 'other', 'bool', 'time', 'red_name', ]
 	# fields = (('name', 'age'), 'other')
-	readonly_fields = ['other']
+	readonly_fields = ['other', 'many']
 	ordering = ['-time']
+	list_editable = ['other']
 	search_fields = ['age', 'name']  # 两个字段中模糊搜素
 	# disable_action = ['delete_selected']
 	fieldsets = (
 		('Edit', {
 			'classes': ('wide',),
 			'fields': ('name', 'age', 'many',),
-			'description': {'name': 'dfdf'},
+			'description': format_html('<span style="color:red">Enable Edit Field!</span>'),
 		}),
 		('UnEdit', {
 			'classes': ('collapse',),
-			'fields': ('url', 'other',),
+			'fields': ('url', 'other', 'bool',),
+			'description': 'Disable Edit field!',
 		}),
 	)
+
 	filter_vertical = ('many',)
 	actions = ['some_test', 'export_selected_objects', 'delete_selected']
 	# actions_on_top = False
 	# actions_on_bottom = True
 	actions_selection_counter = False
 	date_hierarchy = 'time'
+
+	def red_name(self, obj):
+		return format_html('<span style="color:red">{}</span>'.format(obj.name))
 
 	def some_test(self, request, queryset):
 		# do something for yourself!

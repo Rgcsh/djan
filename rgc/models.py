@@ -11,6 +11,7 @@ class Person(models.Model):
 	other = models.CharField(max_length=10, null=True)
 	time = models.DateTimeField(auto_now=True)
 	url = models.URLField(max_length=100, null=True)
+	bool = models.BooleanField(default=True)
 	many = models.ManyToManyField(Many)
 
 	def __str__(self):
