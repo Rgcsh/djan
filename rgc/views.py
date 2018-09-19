@@ -1,6 +1,7 @@
-from django.http import HttpResponse, HttpResponseRedirect, HttpResponseNotFound, HttpResponseForbidden
+from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
-from django.urls import reverse
+from django.template.context_processors import csrf
+
 from rgc.models import Person
 
 
@@ -60,6 +61,12 @@ def export(request):
 
 
 def post(request):
-	print(request.method)
-	# print(request.content_params)
-	return HttpResponse('OK')
+	if request.method == 'POST':
+		if 'name' in request.POST.keys():
+			print('df')
+		print(request.POST)
+		re = request.POST['name']
+		print(request.content_type)
+	x = csrf(request)
+	csrf_token = x['csrf_token']
+	return HttpResponse('{} ; {}'.format(str(re), csrf_token))
