@@ -56,4 +56,10 @@ def debug_view(request):
 def export(request):
 	ct = request.GET['ct']
 	ids = request.GET['ids']
-	return render(request, "debug.html", {'result': '{} !!! {}'.format(ct,ids)})
+	return render(request, "debug.html", {'result': '{} !!! {}'.format(ct, ids)})
+
+
+def post(request):
+	print(request.method)
+	# print(request.content_params)
+	return HttpResponse('OK')

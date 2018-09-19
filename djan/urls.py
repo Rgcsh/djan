@@ -18,7 +18,7 @@ from django.contrib import admin
 from django.urls import include, path
 from django.urls import re_path
 
-from rgc.views import index, reg, new_reg, new_reg1, register, debug_view, export
+from rgc.views import index, reg, new_reg, new_reg1, register, debug_view, export, post
 
 urlpatterns = [
 	path('admin/', admin.site.urls),
@@ -28,9 +28,11 @@ urlpatterns = [
 	path('new_reg1/', new_reg1),
 	path('register/', register),
 	path('export/', export),
+	path('post/', post),
 ]
 
 if settings.DEBUG:
 	import debug_toolbar
+
 	urlpatterns = [path('__debug__/', include(debug_toolbar.urls)),
 				   path('view/', debug_view), ] + urlpatterns
