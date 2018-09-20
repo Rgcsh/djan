@@ -1,0 +1,41 @@
+[
+  {
+    "model": "rgc.person",
+    "pk": 1,
+    "fields": {
+      "name": "1",
+      "age": 1,
+      "other": "1",
+      "time": "2018-09-20T10:55:01.564",
+      "url": "http://127.0.0.1:8000/home/rgc",
+      "bool": true,
+      "many": []
+    }
+  },
+  {
+    "model": "rgc.person",
+    "pk": 3,
+    "fields": {
+      "name": "one",
+      "age": 23,
+      "other": "fir",
+      "time": "2018-09-19T15:59:47.473",
+      "url": "http://127.0.0.1:8000/home/rgc",
+      "bool": true,
+      "many": []
+    }
+  },
+  {
+    "model": "rgc.person",
+    "pk": 4,
+    "fields": {
+      "name": "one1",
+      "age": 231,
+      "other": "fir1",
+      "time": "2018-09-19T15:59:47.473",
+      "url": "http://127.0.0.1:8000/home/rgc1",
+      "bool": true,
+      "many": []
+    }
+  }
+]
