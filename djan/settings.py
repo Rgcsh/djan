@@ -131,7 +131,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
-
+# 加载json数据到数据库的目录
+FIXTURE_DIRS = [os.path.join(BASE_DIR, 'fixture_dir')]
 # debug toolbar
 CONFIG_DEFAULTS = {
 	# 因为默认使用google的jquery，国内访问不到

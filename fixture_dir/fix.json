@@ -1,0 +1,26 @@
+[
+  {
+    "model": "rgc.person",
+    "pk": 3,
+    "fields": {
+      "name": "one",
+      "age": 23,
+      "other": "fir",
+      "time": "2018-09-19 15:59:47.473163",
+      "url": "http://127.0.0.1:8000/home/rgc"
+    }
+  },
+  {
+    "model": "rgc.person",
+    "pk": 4,
+    "fields": {
+      "name": "one1",
+      "age": 231,
+      "other": "fir1",
+      "time": "2018-09-19 15:59:47.473163",
+      "url": "http://127.0.0.1:8000/home/rgc1"
+    }
+  }
+]
+
+

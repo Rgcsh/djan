@@ -1,0 +1,7 @@
+1.导出数据库
+python manage.py dumpdata > fixture_dir/output.json  #导出所有app数据
+python manage.py dumpdata rgc  > fixture_dir/output.json  #导出某个app的数据
+2.加载数据
+settings.py中加常量如下一行
+FIXTURE_DIRS = [os.path.join(BASE_DIR, 'fixture_dir')]   # 导入数据时找的目录
+python manage.py loaddata output.json #加载json格式数据到数据库中（注意json格式为双引号）
