@@ -18,7 +18,8 @@ from django.contrib import admin
 from django.urls import include, path
 from django.urls import re_path
 
-from rgc.views import index, reg, new_reg, new_reg1, register, debug_view, export, post
+from rgc.views import index, reg, new_reg, new_reg1, register, debug_view, export, post, redis
+from django.contrib.auth import urls as auth_urls
 
 urlpatterns = [
 	path('admin/', admin.site.urls),
@@ -29,6 +30,8 @@ urlpatterns = [
 	path('register/', register),
 	path('export/', export),
 	path('post/', post),
+	path('accounts/', include(auth_urls)),  # 用户注册系统
+	path('redis/', redis),  # redis缓存测试
 ]
 
 if settings.DEBUG:

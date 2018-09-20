@@ -47,6 +47,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+	'django.middleware.cache.UpdateCacheMiddleware',
 	'debug_toolbar.middleware.DebugToolbarMiddleware',  # 添加的
 	'django.middleware.security.SecurityMiddleware',
 	'django.contrib.sessions.middleware.SessionMiddleware',
@@ -55,15 +56,45 @@ MIDDLEWARE = [
 	'django.contrib.auth.middleware.AuthenticationMiddleware',
 	'django.contrib.messages.middleware.MessageMiddleware',
 	'django.middleware.clickjacking.XFrameOptionsMiddleware',
+	'django.middleware.cache.FetchFromCacheMiddleware',
 ]
 
 ROOT_URLCONF = 'djan.urls'
 
+# 配置缓存
+CACHES = {
+	'default': {
+		'BACKEND': 'django_redis.cache.RedisCache',
+		'LOCATION': 'redis://127.0.0.1:6379/1',
+		'OPTIONS': {
+			'CLIENT_CLASS': 'django_redis.client.DefaultClient',
+			# 'CLIENT_CLASS': 'redis.client.Redis',
+			'PICKLE_VERISON': -1,  # 序列化版本
+			'SOCKET_CONNECT_TIMEOUT': 5,  # socket简历连接超时时间
+			'SOCKET_TIMEOUT': 5,  # 建立连接后的读写操作超时时间
+		}
+	},
+	'origin_redis': {  # 用于存储redis的业务常量值
+		'BACKEND': 'django_redis.cache.RedisCache',
+		'LOCATION': 'redis://127.0.0.1:6379/2',
+		'OPTIONS': {
+			'CLIENT_CLASS': 'django_redis.client.DefaultClient',
+			# 'CLIENT_CLASS': 'redis.client.Redis',
+			'PICKLE_VERISON': -1,  # 序列化版本
+			'SOCKET_CONNECT_TIMEOUT': 5,  # socket简历连接超时时间
+			'SOCKET_TIMEOUT': 5,  # 建立连接后的读写操作超时时间
+		}
+	}
+}
+
+SESSION_ENGINE = 'django.contrib.sessions.backends.cache'
+SESSION_CACHE_ALIAS = 'default'
+DJANGO_REDIS_LOGGER = 'log.log'
+
 TEMPLATES = [
 	{
 		'BACKEND': 'django.template.backends.django.DjangoTemplates',
-		'DIRS': [os.path.join(BASE_DIR, 'templates')]
-		,
+		'DIRS': [os.path.join(BASE_DIR, 'templates')],
 		'APP_DIRS': True,
 		'OPTIONS': {
 			'context_processors': [
