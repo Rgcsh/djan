@@ -2,13 +2,15 @@ from django.core.cache import cache
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 from django.template.context_processors import csrf
-from django.views.decorators.cache import cache_page
+from django.views.decorators.cache import cache_page, cache_control
+from django.views.decorators.vary import vary_on_headers
 from django_redis import get_redis_connection
 
 from rgc.models import Person
 
 
 def index(request):
+	print('dfdfdfs')
 	# return render(request, "debug.html")
 	return HttpResponse('Hello!!!欢迎！！！')
 
@@ -76,6 +78,7 @@ def post(request):
 	return HttpResponse('{} ; {}'.format(str(re), csrf_token))
 
 
+# 所有人访问此接口都会使用10s的缓存
 @cache_page(10)
 def redis(request):
 	# cache 实际调用的是redis/client，也就是说 通过cache可以操作任何redis方法
@@ -89,3 +92,27 @@ def redis(request):
 	red.hset('hs', 'name', 'val')
 	import random
 	return HttpResponse('redis test success!{}'.format(random.random()))
+
+
+# @vary_on_cookie
+@vary_on_headers('User-Agent')
+def cookie_random(request):
+	import random
+	res = HttpResponse('redis test success!{}'.format(random.random()))
+	# patch_vary_headers(res, ['Cookie'])
+	return res
+
+
+@cache_control(public=True, max_age=10)
+def cache_pub(request):
+	import random
+	return HttpResponse('redis test success!{}'.format(random.random()))
+
+
+@cache_control(max_age=10)
+def cache_pri(request):
+	import random
+	response = HttpResponse('redis test success!{}'.format(random.random()))
+	# patch_cache_control(response, private=True, max_age=10)
+	# print(response['Cache-Control'])
+	return response
