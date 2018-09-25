@@ -223,25 +223,36 @@ LOGGING = {
 			'level': 'DEBUG',
 			'class': 'logging.handlers.RotatingFileHandler',
 			'filename': BASE_DIR + '/logs/debug.log',
-			# 'maxBytes': 1024 * 1024 * 5,
-			'maxBytes': 1024,
+			'maxBytes': 1024 * 1024 * 5,
+			'formatter': 'standard',
+			'backupCount': 5,
+		},
+		'time': {
+			'level': 'DEBUG',
+			'class': 'logging.handlers.TimedRotatingFileHandler',
+			'filename': BASE_DIR + '/logs/debug.log',
+			'when': 'D',
 			'formatter': 'standard',
 			'backupCount': 5,
 		},
 		'console': {
 			'level': 'DEBUG',
 			'class': 'logging.StreamHandler',
-			# 'filename': BASE_DIR + '/logs/console_debug.log',
-			# 'maxBytes': 1024,
+			# 'stream': open(BASE_DIR + '/logs/debug.log', 'w+'),
 			'formatter': 'standard',
 		}
 	},
 	'loggers': {
 		'django': {
-			'handlers': ['default', 'console'],
+			'handlers': ['default','console'],
 			'level': 'DEBUG',
 			'propagate': False
-		}
+		},
+		# 'django.server': {
+		# 	'handlers': ['console', 'default'],
+		# 	'level': 'DEBUG',
+		# 	'propagate': True
+		# }
 	}
 }
 

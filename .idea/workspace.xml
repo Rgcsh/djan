@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c0bcaf2c-538c-42b8-9f1d-6bc976f5b9e7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/logs/debug.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/djan/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/djan/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rgc/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/rgc/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/debug.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/pip-selfcheck.json" beforeDir="false" afterPath="$PROJECT_DIR$/venv/pip-selfcheck.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,10 +43,12 @@
     <session id="1486859694">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.14" value="1" />
+          <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -57,46 +59,47 @@
           <entry key="4" value="2" />
           <entry key="5" value="4" />
           <entry key="json" value="5" />
-          <entry key="log" value="10" />
-          <entry key="py" value="86" />
+          <entry key="log" value="29" />
+          <entry key="py" value="97" />
           <entry key="tcl" value="1" />
-          <entry key="txt" value="2" />
+          <entry key="txt" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JSON" value="5" />
-          <entry key="PLAIN_TEXT" value="25" />
-          <entry key="Python" value="86" />
+          <entry key="PLAIN_TEXT" value="45" />
+          <entry key="Python" value="97" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="5" value="1" />
-          <entry key="Django Console" value="72" />
+          <entry key="Django Console" value="86" />
           <entry key="json" value="137" />
-          <entry key="py" value="3286" />
+          <entry key="log" value="5" />
+          <entry key="py" value="3390" />
           <entry key="txt" value="271" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="137" />
-          <entry key="PLAIN_TEXT" value="272" />
-          <entry key="Python" value="3358" />
+          <entry key="PLAIN_TEXT" value="277" />
+          <entry key="Python" value="3476" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.26764706">
+    <splitter split-orientation="horizontal" split-proportion="0.84339625">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/rgc/views.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="286">
-                  <caret line="106" lean-forward="true" selection-start-line="106" selection-end-line="106" />
+                <state>
+                  <caret line="105" column="14" selection-start-line="105" selection-start-column="14" selection-end-line="105" selection-end-column="14" />
                   <folding>
                     <element signature="e#0#35#0" expanded="true" />
                     <marker date="1537515571424" expanded="true" signature="2467:2468" ph="..." />
@@ -118,24 +121,33 @@
               </provider>
             </entry>
           </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/rgc/models.py">
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/djan/settings.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="676">
-                  <caret line="26" selection-start-line="26" selection-end-line="26" />
+                <state relative-caret-position="276">
+                  <caret line="240" column="19" selection-start-line="240" selection-start-column="19" selection-end-line="240" selection-end-column="19" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/djan/settings.py">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/logs/debug.log">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="91">
-                  <caret line="154" lean-forward="true" selection-start-line="154" selection-end-line="154" />
+                <state relative-caret-position="104">
+                  <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/rgc/models.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="366">
+                  <caret line="26" selection-start-line="26" selection-end-line="26" />
                 </state>
               </provider>
             </entry>
@@ -166,6 +178,11 @@
       <find>CACHE_MIDDLEWARE_KEY_PREFIX</find>
       <find>TIME_ZONE</find>
       <find>USE_L10N</find>
+      <find>4\7=-P[0OI9Y7UT5R4EFWQAZX</find>
+      <find>handlers</find>
+      <find>doRollover</find>
+      <find>--- Logging error ---</find>
+      <find>deb</find>
     </findStrings>
     <replaceStrings>
       <replace>&quot;</replace>
@@ -192,6 +209,8 @@
         <option value="$PROJECT_DIR$/djan/urls.py" />
         <option value="$PROJECT_DIR$/rgc/views.py" />
         <option value="$PROJECT_DIR$/logs/debug.log.5" />
+        <option value="D:/python3.6.5/Lib/logging/handlers.py" />
+        <option value="$PROJECT_DIR$/debug.log" />
         <option value="$PROJECT_DIR$/logs/debug.log" />
         <option value="$PROJECT_DIR$/djan/settings.py" />
       </list>
@@ -245,12 +264,37 @@
             <path>
               <item name="djan" type="b2602c69:ProjectViewProjectNode" />
               <item name="djan" type="462c0819:PsiDirectoryNode" />
-              <item name="rgc" type="462c0819:PsiDirectoryNode" />
+              <item name="test_for_myself" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="djan" type="b2602c69:ProjectViewProjectNode" />
-              <item name="djan" type="462c0819:PsiDirectoryNode" />
-              <item name="test_for_myself" type="462c0819:PsiDirectoryNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="djan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.6 (djan) &gt;" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="djan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.6 (djan) &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="python3.6.5" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="djan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.6 (djan) &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="python3.6.5" type="462c0819:PsiDirectoryNode" />
+              <item name="Lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="djan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.6 (djan) &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="python3.6.5" type="462c0819:PsiDirectoryNode" />
+              <item name="Lib" type="462c0819:PsiDirectoryNode" />
+              <item name="logging" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -260,7 +304,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/venv" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -434,21 +478,27 @@
       <option name="project" value="LOCAL" />
       <updated>1537511574298</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="tet">
+      <created>1537844456252</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1537844456253</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-320" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.09381663" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.15245202" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.64445627" weight="0.344098" />
+      <window_info anchor="bottom" id="Database Changes" order="1" weight="0.32962137" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.64445627" visible="true" weight="0.344098" />
       <window_info anchor="bottom" id="Version Control" order="3" weight="0.32962137" />
-      <window_info anchor="bottom" id="Terminal" order="4" sideWeight="0.6284648" weight="0.35523385" />
+      <window_info anchor="bottom" id="Terminal" order="4" sideWeight="0.6284648" weight="0.44209355" />
       <window_info anchor="bottom" id="Python Console" order="5" sideWeight="0.49946696" weight="0.32962137" />
       <window_info anchor="bottom" id="Event Log" order="6" sideWeight="0.37153518" side_tool="true" weight="0.4610245" />
       <window_info anchor="bottom" id="Message" order="7" />
@@ -510,30 +560,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/views/defaults.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="99" column="9" selection-start-line="99" selection-start-column="9" selection-end-line="99" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/template/defaulttags.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="50" column="25" selection-start-line="50" selection-start-column="25" selection-end-line="50" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/template/context.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rgc/field_type.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/utils/functional.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="143">
@@ -559,9 +585,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-65">
           <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
-          <folding>
-            <element signature="e#346#362#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -589,13 +612,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/knowledge/error_record.txt">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/knowledge/normal.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test_for_myself/test.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -756,9 +772,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="89" column="6" selection-start-line="89" selection-start-column="6" selection-end-line="89" selection-end-column="6" />
-          <folding>
-            <element signature="e#545#572#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -768,6 +781,28 @@
     <entry file="file://$PROJECT_DIR$/logs/debug.log.4" />
     <entry file="file://$PROJECT_DIR$/logs/console_debug.log" />
     <entry file="file://$PROJECT_DIR$/logs/debug.log.5" />
+    <entry file="file://$PROJECT_DIR$/knowledge/normal.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/memcache_toolbar/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rgc/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="105" column="14" selection-start-line="105" selection-start-column="14" selection-end-line="105" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+            <marker date="1537515571424" expanded="true" signature="2467:2468" ph="..." />
+            <marker date="1537515571424" expanded="true" signature="2817:2818" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/djan/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="702">
@@ -780,34 +815,46 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/rgc/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="676">
+        <state relative-caret-position="366">
           <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/python3.6.5/Lib/logging/handlers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="284" column="38" selection-start-line="284" selection-start-column="38" selection-end-line="284" selection-end-column="38" />
+          <folding>
+            <element signature="e#1246#1298#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/python3.6.5/Lib/logging/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="993" column="18" selection-start-line="993" selection-start-column="12" selection-end-line="993" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/debug.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/logs/debug.log">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rgc/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="106" lean-forward="true" selection-start-line="106" selection-end-line="106" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-            <marker date="1537515571424" expanded="true" signature="2467:2468" ph="..." />
-            <marker date="1537515571424" expanded="true" signature="2817:2818" ph="..." />
-          </folding>
+        <state relative-caret-position="104">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/djan/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="154" lean-forward="true" selection-start-line="154" selection-end-line="154" />
+        <state relative-caret-position="276">
+          <caret line="240" column="19" selection-start-line="240" selection-start-column="19" selection-end-line="240" selection-end-column="19" />
         </state>
       </provider>
     </entry>
