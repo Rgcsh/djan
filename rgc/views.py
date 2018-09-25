@@ -3,12 +3,15 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 from django.template.context_processors import csrf
 from django.views.decorators.cache import cache_page, cache_control
+from django.views.decorators.clickjacking import xframe_options_exempt, xframe_options_deny
 from django.views.decorators.vary import vary_on_headers
 from django_redis import get_redis_connection
 
 from rgc.models import Person
 
 
+# @xframe_options_deny
+# @xframe_options_exempt
 def index(request):
 	print('dfdfdfs')
 	# return render(request, "debug.html")
@@ -79,10 +82,10 @@ def post(request):
 
 
 # 所有人访问此接口都会使用10s的缓存
-@cache_page(10)
+# @cache_page(10)
 def redis(request):
 	# cache 实际调用的是redis/client，也就是说 通过cache可以操作任何redis方法
-	cache.set('rgc', 'val', timeout=None)
+	cache.set('is_name', 'value', timeout=None)
 	print(type(cache))
 	print(cache.get('rgc'), cache.ttl('rgc'))
 

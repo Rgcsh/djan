@@ -47,7 +47,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-	'django.middleware.cache.UpdateCacheMiddleware',
+	# 'django.middleware.cache.UpdateCacheMiddleware',
 	'debug_toolbar.middleware.DebugToolbarMiddleware',  # 添加的
 	'django.middleware.security.SecurityMiddleware',
 	'django.contrib.sessions.middleware.SessionMiddleware',
@@ -56,16 +56,18 @@ MIDDLEWARE = [
 	'django.contrib.auth.middleware.AuthenticationMiddleware',
 	'django.contrib.messages.middleware.MessageMiddleware',
 	'django.middleware.clickjacking.XFrameOptionsMiddleware',
-	'django.middleware.cache.FetchFromCacheMiddleware',
+	# 'django.middleware.cache.FetchFromCacheMiddleware',
 ]
-
+# SECURE_SSL_REDIRECT = True  #主动跳到https协议
 ROOT_URLCONF = 'djan.urls'
+APPEND_SLACH = False
 
 # 配置缓存
 CACHES = {
 	'default': {
 		'BACKEND': 'django_redis.cache.RedisCache',
 		'LOCATION': 'redis://127.0.0.1:6379/1',
+		'KEY_PREFIX': 'key',  #
 		'TIMEOUT': 6,
 		'OPTIONS': {
 			'CLIENT_CLASS': 'django_redis.client.DefaultClient',
@@ -151,13 +153,12 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Shanghai'
+USE_TZ = False
 
 USE_I18N = True
 
 USE_L10N = True
-
-USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
@@ -192,23 +193,57 @@ DEBUG_TOOLBAR_PANELS = [
 	'memcache_toolbar.panels.memcache.MemcachePanel',
 ]
 
+# LOGGING = {
+# 	'version': 1,
+# 	'disable_existing_loggers': False,
+# 	'handlers': {
+# 		'console': {
+# 			'class': 'logging.StreamHandler',
+# 		},
+# 	},
+# 	'loggers': {
+# 		'django.db.backends': {
+# 			'handlers': ['console'],
+# 			'level': 'DEBUG' if DEBUG else 'INFO',
+# 		},
+# 	},
+# }
+
 LOGGING = {
 	'version': 1,
-	'disable_existing_loggers': False,
+	'disable_existing_loggers': True,
+	'formatters': {
+		'standard': {
+			'format': '%(asctime)s [%(threadName)s:%(thread)d] [%(name)s:%(lineno)d] [%(module)s:%(funcName)s]'
+					  ' [%(levelname)s]- %(message)s'
+		},  # 日志格式
+	},
 	'handlers': {
-		'console': {
-			'class': 'logging.StreamHandler',
+		'default': {
+			'level': 'DEBUG',
+			'class': 'logging.handlers.RotatingFileHandler',
+			'filename': BASE_DIR + '/logs/debug.log',
+			# 'maxBytes': 1024 * 1024 * 5,
+			'maxBytes': 1024,
+			'formatter': 'standard',
+			'backupCount': 5,
 		},
+		'console': {
+			'level': 'DEBUG',
+			'class': 'logging.StreamHandler',
+			# 'filename': BASE_DIR + '/logs/console_debug.log',
+			# 'maxBytes': 1024,
+			'formatter': 'standard',
+		}
 	},
 	'loggers': {
-		'django.db.backends': {
-			'handlers': ['console'],
-			'level': 'DEBUG' if DEBUG else 'INFO',
-		},
-	},
+		'django': {
+			'handlers': ['default', 'console'],
+			'level': 'DEBUG',
+			'propagate': False
+		}
+	}
 }
-USE_L10N = False
+
 DATE_FORMAT = 'Y-m-d'
 DATETIME_FORMAT = 'Y-m-d H:i:s'
-TIME_ZONE = 'Asia/Shanghai'
-USE_TZ = False
