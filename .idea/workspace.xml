@@ -87,65 +87,50 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="614313018">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="py" value="158" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Python" value="158" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="log" value="13" />
+          <entry key="py" value="3" />
+          <entry key="txt" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="PLAIN_TEXT" value="15" />
+          <entry key="Python" value="3" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.84339625">
+    <splitter split-orientation="horizontal" split-proportion="0.34165367">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/rgc/views.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="182">
-                  <caret line="19" column="9" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+                <state relative-caret-position="81">
+                  <caret line="17" column="11" lean-forward="true" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
                   <folding>
                     <element signature="e#0#35#0" expanded="true" />
-                    <marker date="1537870744109" expanded="true" signature="2629:2630" ph="..." />
-                    <marker date="1537870744109" expanded="true" signature="2979:2980" ph="..." />
                   </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/logs/error.log">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="26">
-                  <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://D:/python3.6.5/Lib/logging/__init__.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="126">
-                  <caret line="1858" column="4" selection-start-line="1858" selection-start-column="4" selection-end-line="1858" selection-end-column="4" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/logs/debug.log">
-              <provider selected="true" editor-type-id="text-editor" />
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/djan/urls.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="122">
-                  <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
-                  <folding>
-                    <element signature="e#628#660#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/djan/settings.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="404">
-                  <caret line="287" lean-forward="true" selection-start-line="287" selection-end-line="287" />
                 </state>
               </provider>
             </entry>
@@ -153,14 +138,28 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+        <leaf>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/rgc/models.py">
+            <entry file="file://$PROJECT_DIR$/djan/settings.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="364">
-                  <caret line="26" selection-start-line="26" selection-end-line="26" />
+                <state relative-caret-position="336">
+                  <caret line="290" column="29" lean-forward="true" selection-start-line="290" selection-start-column="29" selection-end-line="290" selection-end-column="29" />
                 </state>
               </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/logs/debug.log">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="344">
+                  <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/logs/error.log">
+              <provider selected="true" editor-type-id="text-editor" />
             </entry>
           </file>
         </leaf>
@@ -222,8 +221,8 @@
         <option value="$PROJECT_DIR$/logs/debug.log.5" />
         <option value="D:/python3.6.5/Lib/logging/handlers.py" />
         <option value="$PROJECT_DIR$/debug.log" />
-        <option value="$PROJECT_DIR$/logs/debug.log" />
         <option value="$PROJECT_DIR$/logs/error.log" />
+        <option value="$PROJECT_DIR$/logs/debug.log" />
         <option value="$PROJECT_DIR$/rgc/views.py" />
         <option value="$PROJECT_DIR$/djan/settings.py" />
       </list>
@@ -236,10 +235,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1928" />
-    <option name="y" value="-320" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1048" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -263,11 +262,6 @@
               <item name="djan" type="b2602c69:ProjectViewProjectNode" />
               <item name="djan" type="462c0819:PsiDirectoryNode" />
               <item name="fixture_dir" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="djan" type="b2602c69:ProjectViewProjectNode" />
-              <item name="djan" type="462c0819:PsiDirectoryNode" />
-              <item name="knowledge" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="djan" type="b2602c69:ProjectViewProjectNode" />
@@ -488,17 +482,17 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1928" y="-320" width="1936" height="1056" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.15245202" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.14075068" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="1" weight="0.32962137" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.64445627" visible="true" weight="0.34632516" />
+      <window_info anchor="bottom" id="Database Changes" order="1" show_stripe_button="false" weight="0.32962137" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.64445627" visible="true" weight="0.2560113" />
       <window_info anchor="bottom" id="Version Control" order="3" weight="0.32962137" />
-      <window_info anchor="bottom" id="Terminal" order="4" sideWeight="0.6284648" weight="0.44209355" />
+      <window_info anchor="bottom" id="Terminal" order="4" sideWeight="0.6284648" weight="0.4413013" />
       <window_info anchor="bottom" id="Python Console" order="5" sideWeight="0.49946696" weight="0.32962137" />
       <window_info anchor="bottom" id="Event Log" order="6" sideWeight="0.37153518" side_tool="true" weight="0.4610245" />
       <window_info anchor="bottom" id="Message" order="7" />
@@ -560,13 +554,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/template/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="882" column="6" selection-start-line="882" selection-start-column="6" selection-end-line="882" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/utils/datastructures.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="463">
@@ -589,22 +576,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fixture_dir/one.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/fixture_dir/one.json" />
     <entry file="file://$PROJECT_DIR$/manage.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="15" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/knowledge/error_record.txt">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/test_for_myself/test.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -630,13 +608,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/python3.6.5/Lib/json/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="582">
-          <caret line="301" column="4" selection-start-line="301" selection-start-column="4" selection-end-line="301" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://D:/python3.6.5/Lib/json/__init__.py" />
     <entry file="file://$PROJECT_DIR$/test_for_myself/load_data.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
@@ -657,27 +629,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/redis/client.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="1986" column="8" selection-start-line="1986" selection-start-column="8" selection-end-line="1986" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/python3.6.5/Lib/_threading_local.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-562">
-          <caret line="203" column="9" selection-start-line="203" selection-start-column="9" selection-end-line="203" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django_redis/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="16" lean-forward="true" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/redis/client.py" />
+    <entry file="file://D:/python3.6.5/Lib/_threading_local.py" />
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django_redis/__init__.py" />
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/core/cache/backends/base.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="214">
@@ -709,13 +663,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2018.2/system/python_stubs/-2098713921/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-830">
-          <caret line="5246" column="25" selection-start-line="5246" selection-start-column="25" selection-end-line="5246" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2018.2/system/python_stubs/-2098713921/builtins.py" />
     <entry file="file://$PROJECT_DIR$/djan/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -740,20 +688,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django_redis/util.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="676">
-          <caret line="31" column="29" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django_redis/cache.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="50" column="33" selection-start-line="50" selection-start-column="33" selection-end-line="50" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django_redis/util.py" />
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django_redis/cache.py" />
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/views/decorators/vary.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="368">
@@ -774,6 +710,12 @@
     <entry file="file://$PROJECT_DIR$/logs/debug.log.4" />
     <entry file="file://$PROJECT_DIR$/logs/console_debug.log" />
     <entry file="file://$PROJECT_DIR$/logs/debug.log.5" />
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/memcache_toolbar/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://D:/python3.6.5/Lib/logging/handlers.py" />
+    <entry file="file://$PROJECT_DIR$/debug.log" />
+    <entry file="file://D:/python3.6.5/Lib/logging/__init__.py" />
     <entry file="file://$PROJECT_DIR$/knowledge/normal.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="182">
@@ -781,30 +723,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/memcache_toolbar/__init__.py">
+    <entry file="file://$PROJECT_DIR$/knowledge/error_record.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/rgc/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        <state relative-caret-position="209">
+          <caret line="23" selection-start-line="21" selection-end-line="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/python3.6.5/Lib/logging/handlers.py">
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/core/mail/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="284" column="38" selection-start-line="284" selection-start-column="38" selection-end-line="284" selection-end-column="38" />
-          <folding>
-            <element signature="e#1246#1298#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/debug.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="119">
+          <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
         </state>
       </provider>
     </entry>
@@ -818,39 +750,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/python3.6.5/Lib/logging/__init__.py">
+    <entry file="file://$PROJECT_DIR$/rgc/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="1858" column="4" selection-start-line="1858" selection-start-column="4" selection-end-line="1858" selection-end-column="4" />
+        <state relative-caret-position="81">
+          <caret line="17" column="11" lean-forward="true" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/logs/error.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logs/debug.log">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/rgc/views.py">
+    <entry file="file://$PROJECT_DIR$/logs/debug.log">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="19" column="9" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-            <marker date="1537870744109" expanded="true" signature="2629:2630" ph="..." />
-            <marker date="1537870744109" expanded="true" signature="2979:2980" ph="..." />
-          </folding>
+        <state relative-caret-position="344">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/djan/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="287" lean-forward="true" selection-start-line="287" selection-end-line="287" />
+        <state relative-caret-position="336">
+          <caret line="290" column="29" lean-forward="true" selection-start-line="290" selection-start-column="29" selection-end-line="290" selection-end-column="29" />
         </state>
       </provider>
     </entry>

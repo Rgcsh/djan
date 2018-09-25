@@ -1,32 +1,63 @@
-2018-09-25 18:19:07,030 [Dummy-2:9532] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
-2018-09-25 18:19:07,030 [Dummy-2:9532] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
-2018-09-25 18:19:07,039 [Dummy-2:9532] [django.db.backends:111] [utils:execute] [DEBUG]- (0.007) SHOW FULL TABLES; args=None
-2018-09-25 18:19:07,044 [Dummy-2:9532] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
-2018-09-25 18:21:48,138 [Dummy-2:12104] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
-2018-09-25 18:21:48,139 [Dummy-2:12104] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
-2018-09-25 18:21:48,143 [Dummy-2:12104] [django.db.backends:111] [utils:execute] [DEBUG]- (0.003) SHOW FULL TABLES; args=None
-2018-09-25 18:21:48,149 [Dummy-2:12104] [django.db.backends:111] [utils:execute] [DEBUG]- (0.002) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
-2018-09-25 18:22:14,715 [Dummy-2:628] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
-2018-09-25 18:22:14,716 [Dummy-2:628] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
-2018-09-25 18:22:14,720 [Dummy-2:628] [django.db.backends:111] [utils:execute] [DEBUG]- (0.004) SHOW FULL TABLES; args=None
-2018-09-25 18:22:14,725 [Dummy-2:628] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
-2018-09-25 18:22:29,342 [Dummy-2:16352] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
-2018-09-25 18:22:29,343 [Dummy-2:16352] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
-2018-09-25 18:22:29,347 [Dummy-2:16352] [django.db.backends:111] [utils:execute] [DEBUG]- (0.004) SHOW FULL TABLES; args=None
-2018-09-25 18:22:29,352 [Dummy-2:16352] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
-2018-09-25 18:22:49,765 [Dummy-2:7912] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
-2018-09-25 18:22:49,766 [Dummy-2:7912] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
-2018-09-25 18:22:49,772 [Dummy-2:7912] [django.db.backends:111] [utils:execute] [DEBUG]- (0.006) SHOW FULL TABLES; args=None
-2018-09-25 18:22:49,778 [Dummy-2:7912] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
-2018-09-25 18:23:31,623 [Dummy-2:2960] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
-2018-09-25 18:23:31,624 [Dummy-2:2960] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
-2018-09-25 18:23:31,628 [Dummy-2:2960] [django.db.backends:111] [utils:execute] [DEBUG]- (0.004) SHOW FULL TABLES; args=None
-2018-09-25 18:23:31,633 [Dummy-2:2960] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
-2018-09-25 18:24:24,310 [Dummy-2:1512] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
-2018-09-25 18:24:24,311 [Dummy-2:1512] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
-2018-09-25 18:24:24,317 [Dummy-2:1512] [django.db.backends:111] [utils:execute] [DEBUG]- (0.005) SHOW FULL TABLES; args=None
-2018-09-25 18:24:24,322 [Dummy-2:1512] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
-2018-09-25 18:26:41,555 [Dummy-2:3776] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
-2018-09-25 18:26:41,556 [Dummy-2:3776] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
-2018-09-25 18:26:41,561 [Dummy-2:3776] [django.db.backends:111] [utils:execute] [DEBUG]- (0.005) SHOW FULL TABLES; args=None
-2018-09-25 18:26:41,567 [Dummy-2:3776] [django.db.backends:111] [utils:execute] [DEBUG]- (0.002) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-09-25 22:43:44,249 [Dummy-2:824] [django.db.backends:111] [utils:execute] [DEBUG]- (0.016) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2018-09-25 22:43:44,249 [Dummy-2:824] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2018-09-25 22:43:51,875 [Dummy-2:4744] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2018-09-25 22:43:51,890 [Dummy-2:4744] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2018-09-25 22:43:55,341 [Thread-3:7980] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+2018-09-25 22:43:55,556 [Thread-3:7980] [django.request:228] [log:log_response] [ERROR]- Internal Server Error: /index/
+Traceback (most recent call last):
+  File "E:\djan\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "E:\djan\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "E:\djan\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\djan\rgc\views.py", line 17, in index
+    print(4/0)
+ZeroDivisionError: division by zero
+2018-09-25 22:43:55,604 [Thread-3:7980] [django.server:124] [basehttp:log_message] [ERROR]- "GET /index/ HTTP/1.1" 500 81251
+2018-09-25 22:45:27,297 [Dummy-2:10940] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2018-09-25 22:45:27,312 [Dummy-2:10940] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2018-09-25 22:45:32,176 [Thread-4:3740] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+2018-09-25 22:45:32,375 [Thread-4:3740] [django.request:228] [log:log_response] [ERROR]- Internal Server Error: /index/
+Traceback (most recent call last):
+  File "E:\djan\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "E:\djan\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "E:\djan\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\djan\rgc\views.py", line 17, in index
+    print(4/0)
+ZeroDivisionError: division by zero
+2018-09-25 22:45:32,430 [Thread-4:3740] [django.server:124] [basehttp:log_message] [ERROR]- "GET /index/ HTTP/1.1" 500 81251
+2018-09-25 22:46:19,205 [Thread-3:11000] [django.request:228] [log:log_response] [ERROR]- Internal Server Error: /index/
+Traceback (most recent call last):
+  File "E:\djan\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "E:\djan\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "E:\djan\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\djan\rgc\views.py", line 17, in index
+    print(4/0)
+ZeroDivisionError: division by zero
+2018-09-25 22:47:08,108 [Thread-3:11004] [django.request:228] [log:log_response] [ERROR]- Internal Server Error: /index/
+Traceback (most recent call last):
+  File "E:\djan\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "E:\djan\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "E:\djan\venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\djan\rgc\views.py", line 17, in index
+    print(4/0)
+ZeroDivisionError: division by zero
