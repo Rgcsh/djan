@@ -6,7 +6,7 @@ from django.views.decorators.cache import cache_page, cache_control
 from django.views.decorators.clickjacking import xframe_options_exempt, xframe_options_deny
 from django.views.decorators.vary import vary_on_headers
 from django_redis import get_redis_connection
-
+import logging
 from rgc.models import Person
 
 
@@ -14,6 +14,11 @@ from rgc.models import Person
 # @xframe_options_exempt
 def index(request):
 	print('dfdfdfs')
+
+	log=logging.getLogger('django.server')
+	log.debug('welcome in to index!')
+	log.error('welcome in to index!')
+	log.warning('welcome in to index!')
 	# return render(request, "debug.html")
 	return HttpResponse('Hello!!!欢迎！！！')
 

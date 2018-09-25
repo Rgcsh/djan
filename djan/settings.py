@@ -240,21 +240,48 @@ LOGGING = {
 			'class': 'logging.StreamHandler',
 			# 'stream': open(BASE_DIR + '/logs/debug.log', 'w+'),
 			'formatter': 'standard',
-		}
+		},
+		'error': {
+			'level': 'ERROR',
+			'class': 'logging.handlers.RotatingFileHandler',
+			'filename': BASE_DIR + '/logs/error.log',
+			'maxBytes': 1024 * 1024 * 5,
+			'backupCount': 5,
+			'formatter': 'standard',
+		},
 	},
 	'loggers': {
 		'django': {
-			'handlers': ['default','console'],
+			'handlers': ['default', 'console'],
+			'level': 'DEBUG',
+			'propagate': True
+		},
+		'django.server': {
+			'handlers': ['error'],
 			'level': 'DEBUG',
 			'propagate': False
-		},
-		# 'django.server': {
-		# 	'handlers': ['console', 'default'],
-		# 	'level': 'DEBUG',
-		# 	'propagate': True
-		# }
+		}
 	}
 }
 
 DATE_FORMAT = 'Y-m-d'
 DATETIME_FORMAT = 'Y-m-d H:i:s'
+
+# 管理员邮箱
+ADMINS = (
+	('rgc', '2020956572@qq.com'),
+)
+
+# 非空链接，却发生404错误，发送通知MANAGERS
+SEND_BROKEN_LINK_EMAILS = True
+MANAGERS = ADMINS
+
+# Email设置
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.163.com'  # QQ邮箱SMTP服务器(邮箱需要开通SMTP服务)
+EMAIL_PORT = 25  # QQ邮箱SMTP服务端口
+EMAIL_HOST_USER = '2020956572@qq.com'  # 我的邮箱帐号
+EMAIL_HOST_PASSWORD = '**************'  # 授权码
+EMAIL_SUBJECT_PREFIX = 'website'  # 为邮件标题的前缀,默认是'[django]'
+EMAIL_USE_TLS = False  # 开启安全链接
+DEFAULT_FROM_EMAIL = SERVER_EMAIL = EMAIL_HOST_USER  # 设置发件人

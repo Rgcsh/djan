@@ -1,30 +1,28 @@
-2018-09-25 15:18:38,961 [Dummy-2:3508] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
-2018-09-25 15:18:38,961 [Dummy-2:3508] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
-2018-09-25 15:18:38,966 [Dummy-2:3508] [django.db.backends:111] [utils:execute] [DEBUG]- (0.004) SHOW FULL TABLES; args=None
-2018-09-25 15:18:38,972 [Dummy-2:3508] [django.db.backends:111] [utils:execute] [DEBUG]- (0.002) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
-2018-09-25 15:18:44,284 [Thread-3:5440] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
-2018-09-25 15:18:44,458 [Thread-3:5440] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
-2018-09-25 15:18:44,482 [Thread-3:5440] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
-2018-09-25 15:18:44,502 [Thread-3:5440] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SELECT `rgc_person`.`id`, `rgc_person`.`name`, `rgc_person`.`age`, `rgc_person`.`other`, `rgc_person`.`time`, `rgc_person`.`url`, `rgc_person`.`bool` FROM `rgc_person` WHERE `rgc_person`.`id` = 44; args=(44,)
-2018-09-25 15:18:44,533 [Thread-3:5440] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'rgc' AND `django_content_type`.`model` = 'person'); args=('rgc', 'person')
-2018-09-25 15:18:44,759 [Thread-3:5440] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `rgc_many`.`id`, `rgc_many`.`tag` FROM `rgc_many` INNER JOIN `rgc_person_many` ON (`rgc_many`.`id` = `rgc_person_many`.`many_id`) WHERE `rgc_person_many`.`person_id` = 44; args=(44,)
-2018-09-25 15:18:44,861 [Thread-3:5440] [django.server:124] [basehttp:log_message] [INFO]- "GET /admin/rgc/person/44/change/ HTTP/1.1" 200 17181
-2018-09-25 15:18:44,885 [Thread-4:17512] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
-2018-09-25 15:18:44,916 [Thread-4:17512] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
-2018-09-25 15:18:44,960 [Thread-4:17512] [django.db.backends:111] [utils:execute] [DEBUG]- (0.002) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
-2018-09-25 15:18:45,022 [Thread-4:17512] [django.server:124] [basehttp:log_message] [INFO]- "GET /admin/jsi18n/ HTTP/1.1" 200 3185
-2018-09-25 15:19:13,706 [Dummy-2:3228] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
-2018-09-25 15:19:13,707 [Dummy-2:3228] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
-2018-09-25 15:19:13,712 [Dummy-2:3228] [django.db.backends:111] [utils:execute] [DEBUG]- (0.005) SHOW FULL TABLES; args=None
-2018-09-25 15:19:13,718 [Dummy-2:3228] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
-2018-09-25 15:19:23,248 [Thread-3:628] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
-2018-09-25 15:19:23,441 [Thread-3:628] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
-2018-09-25 15:19:23,478 [Thread-3:628] [django.db.backends:111] [utils:execute] [DEBUG]- (0.004) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
-2018-09-25 15:19:23,504 [Thread-3:628] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `rgc_person`.`id`, `rgc_person`.`name`, `rgc_person`.`age`, `rgc_person`.`other`, `rgc_person`.`time`, `rgc_person`.`url`, `rgc_person`.`bool` FROM `rgc_person` WHERE `rgc_person`.`id` = 44; args=(44,)
-2018-09-25 15:19:23,541 [Thread-3:628] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'rgc' AND `django_content_type`.`model` = 'person'); args=('rgc', 'person')
-2018-09-25 15:19:23,819 [Thread-3:628] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SELECT `rgc_many`.`id`, `rgc_many`.`tag` FROM `rgc_many` INNER JOIN `rgc_person_many` ON (`rgc_many`.`id` = `rgc_person_many`.`many_id`) WHERE `rgc_person_many`.`person_id` = 44; args=(44,)
-2018-09-25 15:19:23,941 [Thread-3:628] [django.server:124] [basehttp:log_message] [INFO]- "GET /admin/rgc/person/44/change/ HTTP/1.1" 200 17181
-2018-09-25 15:19:23,966 [Thread-4:14824] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
-2018-09-25 15:19:23,995 [Thread-4:14824] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
-2018-09-25 15:19:24,021 [Thread-4:14824] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
-2018-09-25 15:19:24,093 [Thread-4:14824] [django.server:124] [basehttp:log_message] [INFO]- "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+2018-09-25 18:19:07,030 [Dummy-2:9532] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-09-25 18:19:07,030 [Dummy-2:9532] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-09-25 18:19:07,039 [Dummy-2:9532] [django.db.backends:111] [utils:execute] [DEBUG]- (0.007) SHOW FULL TABLES; args=None
+2018-09-25 18:19:07,044 [Dummy-2:9532] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-09-25 18:21:48,138 [Dummy-2:12104] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-09-25 18:21:48,139 [Dummy-2:12104] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-09-25 18:21:48,143 [Dummy-2:12104] [django.db.backends:111] [utils:execute] [DEBUG]- (0.003) SHOW FULL TABLES; args=None
+2018-09-25 18:21:48,149 [Dummy-2:12104] [django.db.backends:111] [utils:execute] [DEBUG]- (0.002) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-09-25 18:22:14,715 [Dummy-2:628] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-09-25 18:22:14,716 [Dummy-2:628] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-09-25 18:22:14,720 [Dummy-2:628] [django.db.backends:111] [utils:execute] [DEBUG]- (0.004) SHOW FULL TABLES; args=None
+2018-09-25 18:22:14,725 [Dummy-2:628] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-09-25 18:22:29,342 [Dummy-2:16352] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-09-25 18:22:29,343 [Dummy-2:16352] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-09-25 18:22:29,347 [Dummy-2:16352] [django.db.backends:111] [utils:execute] [DEBUG]- (0.004) SHOW FULL TABLES; args=None
+2018-09-25 18:22:29,352 [Dummy-2:16352] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-09-25 18:22:49,765 [Dummy-2:7912] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-09-25 18:22:49,766 [Dummy-2:7912] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-09-25 18:22:49,772 [Dummy-2:7912] [django.db.backends:111] [utils:execute] [DEBUG]- (0.006) SHOW FULL TABLES; args=None
+2018-09-25 18:22:49,778 [Dummy-2:7912] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-09-25 18:23:31,623 [Dummy-2:2960] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-09-25 18:23:31,624 [Dummy-2:2960] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-09-25 18:23:31,628 [Dummy-2:2960] [django.db.backends:111] [utils:execute] [DEBUG]- (0.004) SHOW FULL TABLES; args=None
+2018-09-25 18:23:31,633 [Dummy-2:2960] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-09-25 18:24:24,310 [Dummy-2:1512] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-09-25 18:24:24,311 [Dummy-2:1512] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-09-25 18:24:24,317 [Dummy-2:1512] [django.db.backends:111] [utils:execute] [DEBUG]- (0.005) SHOW FULL TABLES; args=None
+2018-09-25 18:24:24,322 [Dummy-2:1512] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
