@@ -26,3 +26,7 @@
 2018-09-25 18:24:24,311 [Dummy-2:1512] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
 2018-09-25 18:24:24,317 [Dummy-2:1512] [django.db.backends:111] [utils:execute] [DEBUG]- (0.005) SHOW FULL TABLES; args=None
 2018-09-25 18:24:24,322 [Dummy-2:1512] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-09-25 18:26:41,555 [Dummy-2:3776] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-09-25 18:26:41,556 [Dummy-2:3776] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-09-25 18:26:41,561 [Dummy-2:3776] [django.db.backends:111] [utils:execute] [DEBUG]- (0.005) SHOW FULL TABLES; args=None
+2018-09-25 18:26:41,567 [Dummy-2:3776] [django.db.backends:111] [utils:execute] [DEBUG]- (0.002) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
