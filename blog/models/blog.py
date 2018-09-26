@@ -1,10 +1,9 @@
 from django.db import models
 
 
-
-class Person(models.Model):
+class Blog(models.Model):
 	class Meta:
-		db_table = 'person'  # 添加表名
+		db_table = 'blog'  # 添加表名
 
 	name = models.CharField(max_length=30)
 	age = models.IntegerField()
@@ -13,7 +12,6 @@ class Person(models.Model):
 	url = models.URLField(max_length=100, null=True)
 	bool = models.BooleanField(default=True)
 	te = models.BooleanField(default=True)
-	many = models.BooleanField(default=True)
 
 	def __str__(self):
 		return self.name

@@ -38,7 +38,7 @@ class PersonAdmin(admin.ModelAdmin):
 		}),
 	)
 
-	filter_vertical = ('many',)
+	# filter_vertical = ('many',)
 	actions = ['some_test', 'export_selected_objects', 'delete_selected']
 	# actions_on_top = False
 	# actions_on_bottom = True

@@ -62,6 +62,7 @@ INSTALLED_APPS = [
 	'django.contrib.messages',
 	'django.contrib.staticfiles',
 	'rgc',
+	'blog',
 	'debug_toolbar',  # 添加的
 	'memcache_toolbar',
 	'django.contrib.sitemaps',
