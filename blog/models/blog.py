@@ -11,7 +11,7 @@ class Blog(models.Model):
 	time = models.DateTimeField(auto_now=True)
 	url = models.URLField(max_length=100, null=True)
 	bool = models.BooleanField(default=True)
-	te = models.BooleanField(default=True)
+	tes = models.BooleanField(default=True)
 
 	def __str__(self):
 		return self.name
