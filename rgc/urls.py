@@ -18,7 +18,7 @@ from django.contrib.sitemaps.views import sitemap
 from django.urls import path
 from django.urls import re_path
 
-from rgc.models import Person
+from rgc.models.person import Person
 
 info_dict = {
 	'queryset': Person.objects.all(),

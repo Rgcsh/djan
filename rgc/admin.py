@@ -6,7 +6,7 @@ from django.http import HttpResponseRedirect
 # from rgc.widgets import RichTextEditorWidget
 from django.utils.html import format_html
 
-from rgc.models import Person
+from rgc.models.person import Person
 
 AdminSite.empty_value_display = ''  # 空字符显示
 admin.site.disable_action('delete_selected')

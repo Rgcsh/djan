@@ -3908,3 +3908,223 @@ django.template.base.VariableDoesNotExist: Failed lookup for key [trans_status] 
 2018-09-26 16:53:59,688 [Thread-10:7772] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
 2018-09-26 16:53:59,759 [Thread-10:7772] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
 2018-09-26 16:53:59,795 [Thread-10:7772] [django.db.backends:111] [utils:execute] [DEBUG]- (0.021) EXPLAIN SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=[1]
+2018-09-26 16:56:36,196 [Thread-14:5672] [django.template:872] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'is_popup' in template 'admin/login.html'.
+Traceback (most recent call last):
+  File "G:\djan\venv\lib\site-packages\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "G:\djan\venv\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\djan\venv\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\djan\venv\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\djan\venv\lib\site-packages\django\template\base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_popup] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: 'JACnRjOLRHahCEGDrf5XKGLG1NJb81yDhIRSMzMljvrN2HSa2duUZUJcVCao6mkc'>, 'debug': True, 'sql_queries': <function debug.<locals>.<lambda> at 0x000001E52C11E400>, 'request': <WSGIRequest: GET '/myadmin/login/?next=/myadmin/'>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x000001E52C0DF6A0>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x000001E52C12B908>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x000001E52C0DF630>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'form': <AdminAuthenticationForm bound=False, valid=Unknown, fields=(username;password)>, 'view': <django.contrib.auth.views.LoginView object at 0x000001E52C0C7390>, 'site_title': 'Django site admin', 'site_header': 'Django administration', 'site_url': '/', 'has_permission': False, 'available_apps': [], 'title': 'Log in', 'app_path': '/myadmin/login/?next=/myadmin/', 'username': '', 'next': '/myadmin/', 'site': <django.contrib.sites.requests.RequestSite object at 0x000001E52C0C3438>, 'site_name': '127.0.0.1:8000', 'LANGUAGE_CODE': 'en-us', 'LANGUAGE_BIDI': False}]
+2018-09-26 16:56:36,197 [Thread-14:5672] [django.template:872] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'is_popup' in template 'admin/login.html'.
+Traceback (most recent call last):
+  File "G:\djan\venv\lib\site-packages\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "G:\djan\venv\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\djan\venv\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\djan\venv\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\djan\venv\lib\site-packages\django\template\base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_popup] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: 'JACnRjOLRHahCEGDrf5XKGLG1NJb81yDhIRSMzMljvrN2HSa2duUZUJcVCao6mkc'>, 'debug': True, 'sql_queries': <function debug.<locals>.<lambda> at 0x000001E52C11E400>, 'request': <WSGIRequest: GET '/myadmin/login/?next=/myadmin/'>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x000001E52C0DF6A0>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x000001E52C12B908>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x000001E52C0DF630>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'form': <AdminAuthenticationForm bound=False, valid=Unknown, fields=(username;password)>, 'view': <django.contrib.auth.views.LoginView object at 0x000001E52C0C7390>, 'site_title': 'Django site admin', 'site_header': 'Django administration', 'site_url': '/', 'has_permission': False, 'available_apps': [], 'title': 'Log in', 'app_path': '/myadmin/login/?next=/myadmin/', 'username': '', 'next': '/myadmin/', 'site': <django.contrib.sites.requests.RequestSite object at 0x000001E52C0C3438>, 'site_name': '127.0.0.1:8000', 'LANGUAGE_CODE': 'en-us', 'LANGUAGE_BIDI': False}]
+2018-09-26 16:56:37,808 [Thread-16:11000] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-09-26 16:56:37,837 [Thread-16:11000] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-09-26 16:56:37,883 [Thread-16:11000] [django.db.backends:111] [utils:execute] [DEBUG]- (0.023) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`username` = 'rgc'; args=('rgc',)
+2018-09-26 16:56:38,117 [Thread-16:11000] [django.db.backends:111] [utils:execute] [DEBUG]- (0.078) UPDATE `auth_user` SET `last_login` = '2018-09-26 16:56:38.038442' WHERE `auth_user`.`id` = 1; args=('2018-09-26 16:56:38.038442', 1)
+2018-09-26 16:56:38,361 [Thread-17:4284] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-09-26 16:56:38,382 [Thread-17:4284] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-09-26 16:56:38,405 [Thread-17:4284] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-09-26 16:56:38,440 [Thread-17:4284] [django.template:872] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'is_popup' in template 'admin/index.html'.
+Traceback (most recent call last):
+  File "G:\djan\venv\lib\site-packages\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "G:\djan\venv\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\djan\venv\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\djan\venv\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\djan\venv\lib\site-packages\django\template\base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_popup] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: 'f5zYbZcaDgLwxGAvAjtQjfZtPv76Q632NQttrHmUCl9QYucWc54guNWou63mJvJt'>, 'debug': True, 'sql_queries': <function debug.<locals>.<lambda> at 0x000001E52C1876A8>, 'request': <WSGIRequest: GET '/myadmin/'>, 'user': <SimpleLazyObject: <User: rgc>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x000001E52C182748>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x000001E52C0C30F0>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'site_title': 'Django site admin', 'site_header': 'Django administration', 'site_url': '/', 'has_permission': True, 'available_apps': [{'name': 'Authentication and Authorization', 'app_label': 'auth', 'app_url': '/myadmin/auth/', 'has_module_perms': True, 'models': [{'name': 'Groups', 'object_name': 'Group', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/myadmin/auth/group/', 'add_url': '/myadmin/auth/group/add/'}, {'name': 'Users', 'object_name': 'User', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/myadmin/auth/user/', 'add_url': '/myadmin/auth/user/add/'}]}, {'name': 'Rgc', 'app_label': 'rgc', 'app_url': '/myadmin/rgc/', 'has_module_perms': True, 'models': [{'name': 'Persons', 'object_name': 'Person', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/myadmin/rgc/person/', 'add_url': '/myadmin/rgc/person/add/'}]}], 'title': 'Site administration', 'app_list': [{'name': 'Authentication and Authorization', 'app_label': 'auth', 'app_url': '/myadmin/auth/', 'has_module_perms': True, 'models': [{'name': 'Groups', 'object_name': 'Group', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/myadmin/auth/group/', 'add_url': '/myadmin/auth/group/add/'}, {'name': 'Users', 'object_name': 'User', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/myadmin/auth/user/', 'add_url': '/myadmin/auth/user/add/'}]}, {'name': 'Rgc', 'app_label': 'rgc', 'app_url': '/myadmin/rgc/', 'has_module_perms': True, 'models': [{'name': 'Persons', 'object_name': 'Person', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/myadmin/rgc/person/', 'add_url': '/myadmin/rgc/person/add/'}]}], 'LANGUAGE_CODE': 'en-us', 'LANGUAGE_BIDI': False}]
+2018-09-26 16:56:38,441 [Thread-17:4284] [django.template:872] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'is_popup' in template 'admin/index.html'.
+Traceback (most recent call last):
+  File "G:\djan\venv\lib\site-packages\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "G:\djan\venv\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\djan\venv\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\djan\venv\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\djan\venv\lib\site-packages\django\template\base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_popup] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: 'f5zYbZcaDgLwxGAvAjtQjfZtPv76Q632NQttrHmUCl9QYucWc54guNWou63mJvJt'>, 'debug': True, 'sql_queries': <function debug.<locals>.<lambda> at 0x000001E52C1876A8>, 'request': <WSGIRequest: GET '/myadmin/'>, 'user': <SimpleLazyObject: <User: rgc>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x000001E52C182748>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x000001E52C0C30F0>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'site_title': 'Django site admin', 'site_header': 'Django administration', 'site_url': '/', 'has_permission': True, 'available_apps': [{'name': 'Authentication and Authorization', 'app_label': 'auth', 'app_url': '/myadmin/auth/', 'has_module_perms': True, 'models': [{'name': 'Groups', 'object_name': 'Group', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/myadmin/auth/group/', 'add_url': '/myadmin/auth/group/add/'}, {'name': 'Users', 'object_name': 'User', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/myadmin/auth/user/', 'add_url': '/myadmin/auth/user/add/'}]}, {'name': 'Rgc', 'app_label': 'rgc', 'app_url': '/myadmin/rgc/', 'has_module_perms': True, 'models': [{'name': 'Persons', 'object_name': 'Person', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/myadmin/rgc/person/', 'add_url': '/myadmin/rgc/person/add/'}]}], 'title': 'Site administration', 'app_list': [{'name': 'Authentication and Authorization', 'app_label': 'auth', 'app_url': '/myadmin/auth/', 'has_module_perms': True, 'models': [{'name': 'Groups', 'object_name': 'Group', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/myadmin/auth/group/', 'add_url': '/myadmin/auth/group/add/'}, {'name': 'Users', 'object_name': 'User', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/myadmin/auth/user/', 'add_url': '/myadmin/auth/user/add/'}]}, {'name': 'Rgc', 'app_label': 'rgc', 'app_url': '/myadmin/rgc/', 'has_module_perms': True, 'models': [{'name': 'Persons', 'object_name': 'Person', 'perms': {'add': True, 'change': True, 'delete': True, 'view': True}, 'view_only': False, 'admin_url': '/myadmin/rgc/person/', 'add_url': '/myadmin/rgc/person/add/'}]}], 'LANGUAGE_CODE': 'en-us', 'LANGUAGE_BIDI': False}]
+2018-09-26 16:56:38,450 [Thread-17:4284] [django.db.backends:111] [utils:execute] [DEBUG]- (0.002) SELECT `django_admin_log`.`id`, `django_admin_log`.`action_time`, `django_admin_log`.`user_id`, `django_admin_log`.`content_type_id`, `django_admin_log`.`object_id`, `django_admin_log`.`object_repr`, `django_admin_log`.`action_flag`, `django_admin_log`.`change_message`, `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined`, `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_admin_log` INNER JOIN `auth_user` ON (`django_admin_log`.`user_id` = `auth_user`.`id`) LEFT OUTER JOIN `django_content_type` ON (`django_admin_log`.`content_type_id` = `django_content_type`.`id`) WHERE `django_admin_log`.`user_id` = 1 ORDER BY `django_admin_log`.`action_time` DESC  LIMIT 10; args=(1,)
+2018-09-26 16:59:07,740 [Dummy-2:7544] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-09-26 16:59:07,740 [Dummy-2:7544] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-09-26 16:59:07,742 [Dummy-2:7544] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
+2018-09-26 16:59:07,748 [Dummy-2:7544] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-09-26 16:59:10,166 [Thread-3:6060] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-09-26 16:59:10,320 [Thread-3:6060] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-09-26 16:59:10,345 [Thread-3:6060] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-09-26 16:59:10,369 [Thread-3:6060] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SELECT COUNT(*) AS `__count` FROM `person`; args=()
+2018-09-26 16:59:10,404 [Thread-3:6060] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SELECT COUNT(*) AS `__count` FROM `person`; args=()
+2018-09-26 16:59:10,428 [Thread-3:6060] [django.db.backends:111] [utils:execute] [DEBUG]- (0.002) SELECT `person`.`id`, `person`.`name`, `person`.`age`, `person`.`other`, `person`.`time`, `person`.`url`, `person`.`bool` FROM `person` ORDER BY `person`.`time` DESC, `person`.`id` DESC  LIMIT 10; args=()
+2018-09-26 16:59:10,697 [Thread-3:6060] [django.db.backends:111] [utils:execute] [DEBUG]- (0.002) SELECT MIN(`person`.`time`) AS `first`, MAX(`person`.`time`) AS `last` FROM `person`; args=()
+2018-09-26 16:59:10,723 [Thread-3:6060] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT DISTINCT DATE(`person`.`time`) AS `datefield` FROM `person` WHERE `person`.`time` IS NOT NULL ORDER BY `datefield` ASC; args=()
+2018-09-26 16:59:10,749 [Thread-3:6060] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SELECT DISTINCT `person`.`name` FROM `person` ORDER BY `person`.`name` ASC; args=()
+2018-09-26 16:59:10,779 [Thread-3:6060] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT DISTINCT `person`.`age` FROM `person` ORDER BY `person`.`age` ASC; args=()
+2018-09-26 16:59:11,042 [Thread-4:15852] [django.db.backends:111] [utils:execute] [DEBUG]- (0.003) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-09-26 16:59:11,080 [Thread-4:15852] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-09-26 16:59:11,114 [Thread-4:15852] [django.db.backends:111] [utils:execute] [DEBUG]- (0.003) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-09-26 16:59:12,768 [Thread-5:4000] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-09-26 16:59:12,791 [Thread-5:4000] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-09-26 16:59:12,813 [Thread-5:4000] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-09-26 16:59:12,834 [Thread-5:4000] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `person`.`id`, `person`.`name`, `person`.`age`, `person`.`other`, `person`.`time`, `person`.`url`, `person`.`bool` FROM `person` WHERE `person`.`id` = 47; args=(47,)
+2018-09-26 16:59:12,854 [Thread-5:4000] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'rgc' AND `django_content_type`.`model` = 'person'); args=('rgc', 'person')
+2018-09-26 16:59:12,923 [Thread-5:4000] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SELECT `rgc_many`.`id`, `rgc_many`.`tag` FROM `rgc_many` INNER JOIN `person_many` ON (`rgc_many`.`id` = `person_many`.`many_id`) WHERE `person_many`.`person_id` = 47; args=(47,)
+2018-09-26 16:59:13,091 [Thread-6:18316] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-09-26 16:59:13,137 [Thread-6:18316] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-09-26 16:59:13,174 [Thread-6:18316] [django.db.backends:111] [utils:execute] [DEBUG]- (0.002) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-09-26 16:59:16,547 [Thread-7:7428] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-09-26 16:59:16,570 [Thread-7:7428] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-09-26 16:59:16,591 [Thread-7:7428] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-09-26 16:59:16,614 [Thread-7:7428] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `person`.`id`, `person`.`name`, `person`.`age`, `person`.`other`, `person`.`time`, `person`.`url`, `person`.`bool` FROM `person` WHERE `person`.`id` = 47; args=(47,)
+2018-09-26 16:59:16,834 [Thread-7:7428] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `rgc_many`.`id`, `rgc_many`.`tag` FROM `rgc_many` INNER JOIN `person_many` ON (`rgc_many`.`id` = `person_many`.`many_id`) WHERE `person_many`.`person_id` = 47; args=(47,)
+2018-09-26 16:59:16,959 [Thread-8:17264] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-09-26 16:59:16,999 [Thread-8:17264] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-09-26 16:59:17,035 [Thread-8:17264] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-09-26 16:59:30,182 [Thread-9:4800] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-09-26 16:59:30,206 [Thread-9:4800] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-09-26 16:59:30,226 [Thread-9:4800] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-09-26 16:59:30,247 [Thread-9:4800] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SELECT `person`.`id`, `person`.`name`, `person`.`age`, `person`.`other`, `person`.`time`, `person`.`url`, `person`.`bool` FROM `person` WHERE `person`.`id` = 47; args=(47,)
+2018-09-26 16:59:30,313 [Thread-9:4800] [django.db.backends:111] [utils:execute] [DEBUG]- (0.046) UPDATE `person` SET `name` = 'rgc41', `age` = 141, `other` = NULL, `time` = '2018-09-26 16:59:30.267481', `url` = 'http://127.0.0.1:8000/myadmin/rgc/person/47/change/', `bool` = 1 WHERE `person`.`id` = 47; args=('rgc41', 141, '2018-09-26 16:59:30.267481', 'http://127.0.0.1:8000/myadmin/rgc/person/47/change/', True, 47)
+2018-09-26 16:59:30,361 [Thread-9:4800] [django.db.backends:111] [utils:execute] [DEBUG]- (0.028) INSERT INTO `django_admin_log` (`action_time`, `user_id`, `content_type_id`, `object_id`, `object_repr`, `action_flag`, `change_message`) VALUES ('2018-09-26 16:59:30.333471', 1, 7, '47', 'rgc41', 2, '[{\"changed\": {\"fields\": [\"name\", \"url\"]}}]'); args=['2018-09-26 16:59:30.333471', 1, 7, '47', 'rgc41', 2, '[{"changed": {"fields": ["name", "url"]}}]']
+2018-09-26 16:59:30,496 [Thread-10:5924] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-09-26 16:59:30,517 [Thread-10:5924] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-09-26 16:59:30,538 [Thread-10:5924] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-09-26 16:59:30,558 [Thread-10:5924] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SELECT COUNT(*) AS `__count` FROM `person`; args=()
+2018-09-26 16:59:30,577 [Thread-10:5924] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT COUNT(*) AS `__count` FROM `person`; args=()
+2018-09-26 16:59:30,597 [Thread-10:5924] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `person`.`id`, `person`.`name`, `person`.`age`, `person`.`other`, `person`.`time`, `person`.`url`, `person`.`bool` FROM `person` ORDER BY `person`.`time` DESC, `person`.`id` DESC  LIMIT 10; args=()
+2018-09-26 16:59:30,649 [Thread-10:5924] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SELECT MIN(`person`.`time`) AS `first`, MAX(`person`.`time`) AS `last` FROM `person`; args=()
+2018-09-26 16:59:30,674 [Thread-10:5924] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SELECT DISTINCT DATE(`person`.`time`) AS `datefield` FROM `person` WHERE `person`.`time` IS NOT NULL ORDER BY `datefield` ASC; args=()
+2018-09-26 16:59:30,712 [Thread-10:5924] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT DISTINCT `person`.`name` FROM `person` ORDER BY `person`.`name` ASC; args=()
+2018-09-26 16:59:30,745 [Thread-10:5924] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT DISTINCT `person`.`age` FROM `person` ORDER BY `person`.`age` ASC; args=()
+2018-09-26 16:59:31,026 [Thread-11:12588] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-09-26 16:59:31,067 [Thread-11:12588] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-09-26 16:59:31,104 [Thread-11:12588] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-09-26 17:00:10,309 [MainThread:19760] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-09-26 17:00:10,309 [MainThread:19760] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-09-26 17:00:10,311 [MainThread:19760] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
+2018-09-26 17:00:10,315 [MainThread:19760] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-09-26 17:00:26,234 [Dummy-2:13124] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-09-26 17:00:26,234 [Dummy-2:13124] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-09-26 17:00:26,236 [Dummy-2:13124] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
+2018-09-26 17:00:26,241 [Dummy-2:13124] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-09-26 17:00:28,050 [MainThread:19888] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-09-26 17:00:28,050 [MainThread:19888] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-09-26 17:00:28,052 [MainThread:19888] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
+2018-09-26 17:00:28,057 [MainThread:19888] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-09-26 17:00:44,025 [MainThread:9116] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-09-26 17:00:44,025 [MainThread:9116] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-09-26 17:00:44,026 [MainThread:9116] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SELECT @@sql_mode; args=None
+2018-09-26 17:00:44,811 [MainThread:9116] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
+2018-09-26 17:00:44,815 [MainThread:9116] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-09-26 17:00:44,817 [MainThread:9116] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
+2018-09-26 17:00:44,819 [MainThread:9116] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-09-26 17:00:44,842 [MainThread:9116] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
+2018-09-26 17:00:44,846 [MainThread:9116] [django.db.backends.schema:124] [schema:execute] [DEBUG]- ALTER TABLE `person` ADD COLUMN `te` bool DEFAULT %s NOT NULL; (params [True])
+2018-09-26 17:00:45,641 [MainThread:9116] [django.db.backends:111] [utils:execute] [DEBUG]- (0.794) ALTER TABLE `person` ADD COLUMN `te` bool DEFAULT 1 NOT NULL; args=[True]
+2018-09-26 17:00:45,642 [MainThread:9116] [django.db.backends.schema:124] [schema:execute] [DEBUG]- ALTER TABLE `person` ALTER COLUMN `te` DROP DEFAULT; (params [])
+2018-09-26 17:00:45,650 [MainThread:9116] [django.db.backends:111] [utils:execute] [DEBUG]- (0.008) ALTER TABLE `person` ALTER COLUMN `te` DROP DEFAULT; args=[]
+2018-09-26 17:00:45,671 [MainThread:9116] [django.db.backends:111] [utils:execute] [DEBUG]- (0.020) SELECT engine FROM information_schema.tables WHERE table_name = 'person'; args=['person']
+2018-09-26 17:00:45,673 [MainThread:9116] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
+2018-09-26 17:00:45,690 [MainThread:9116] [django.db.backends:111] [utils:execute] [DEBUG]- (0.016) INSERT INTO `django_migrations` (`app`, `name`, `applied`) VALUES ('rgc', '0010_person_te', '2018-09-26 17:00:45.673511'); args=['rgc', '0010_person_te', '2018-09-26 17:00:45.673511']
+2018-09-26 17:00:45,773 [MainThread:9116] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
+2018-09-26 17:00:45,774 [MainThread:9116] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-09-26 17:00:45,787 [MainThread:9116] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'admin' AND `django_content_type`.`model` = 'logentry'); args=('admin', 'logentry')
+2018-09-26 17:00:45,791 [MainThread:9116] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (1) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(1,)
+2018-09-26 17:00:45,792 [MainThread:9116] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'admin'; args=('admin',)
+2018-09-26 17:00:45,794 [MainThread:9116] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'auth' AND `django_content_type`.`model` = 'permission'); args=('auth', 'permission')
+2018-09-26 17:00:45,796 [MainThread:9116] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'auth' AND `django_content_type`.`model` = 'group'); args=('auth', 'group')
+2018-09-26 17:00:45,798 [MainThread:9116] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'auth' AND `django_content_type`.`model` = 'user'); args=('auth', 'user')
+2018-09-26 17:00:45,801 [MainThread:9116] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (2, 3, 4) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(2, 3, 4)
+2018-09-26 17:00:45,803 [MainThread:9116] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'auth'; args=('auth',)
+2018-09-26 17:00:45,805 [MainThread:9116] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'contenttypes' AND `django_content_type`.`model` = 'contenttype'); args=('contenttypes', 'contenttype')
+2018-09-26 17:00:45,807 [MainThread:9116] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (5) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(5,)
+2018-09-26 17:00:45,809 [MainThread:9116] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'contenttypes'; args=('contenttypes',)
+2018-09-26 17:00:45,810 [MainThread:9116] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'sessions' AND `django_content_type`.`model` = 'session'); args=('sessions', 'session')
+2018-09-26 17:00:45,813 [MainThread:9116] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (6) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(6,)
+2018-09-26 17:00:45,816 [MainThread:9116] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'sessions'; args=('sessions',)
+2018-09-26 17:00:45,819 [MainThread:9116] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'rgc' AND `django_content_type`.`model` = 'person'); args=('rgc', 'person')
+2018-09-26 17:00:45,821 [MainThread:9116] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'rgc' AND `django_content_type`.`model` = 'many'); args=('rgc', 'many')
+2018-09-26 17:00:45,826 [MainThread:9116] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (8, 7) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(8, 7)
+2018-09-26 17:00:45,828 [MainThread:9116] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'rgc'; args=('rgc',)
