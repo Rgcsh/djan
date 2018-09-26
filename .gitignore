@@ -1,0 +1,6 @@
+*.pyo
+*.pyd
+*.pyc
+*.log
+
+/.idea
