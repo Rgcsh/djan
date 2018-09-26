@@ -14,7 +14,7 @@ from rgc.models import Person
 # @xframe_options_exempt
 def index(request):
     print('dfdfdfs')
-    print(4/0)
+    # print(4/0)
     # log = logging.getLogger('django.server')
     # log.debug('welcome in to index!')
     # log.error('welcome in to index!')

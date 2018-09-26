@@ -24,3 +24,6 @@ class Person(models.Model):
 	@classmethod
 	def get_by_name_age(cls, info):
 		return cls.objects.get(**info)
+
+	def get_absolute_url(self):
+		return str(self.name)

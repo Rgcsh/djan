@@ -16,12 +16,19 @@ Including another URLconf
 from django.conf import settings
 from django.contrib import admin
 from django.contrib.auth import urls as auth_urls
+from django.contrib.sitemaps import GenericSitemap
+from django.contrib.sitemaps.views import sitemap
 from django.urls import include, path
 from django.urls import re_path
 
+from rgc.models import Person
 from rgc.views import index, reg, new_reg, new_reg1, register, debug_view, export, post, redis, cookie_random, \
 	cache_pub, cache_pri
 
+info_dict = {
+	'queryset': Person.objects.all(),
+	'date_field': 'time',
+}
 urlpatterns = [
 	path('admin/', admin.site.urls),
 	path('index/', index),
@@ -36,6 +43,8 @@ urlpatterns = [
 	path('cookie_random/', cookie_random),  # redis缓存测试
 	path('cache_pub/', cache_pub),  # redis缓存测试
 	path('cache_pri/', cache_pri),  # redis缓存测试
+	path('sitemap.xml', sitemap, {'sitemaps': {'blog': GenericSitemap(info_dict, priority=0.6)}},
+		 name='django.contrib.sitemaps.views.sitemap'),
 ]
 
 if settings.DEBUG:

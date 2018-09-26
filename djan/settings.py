@@ -27,7 +27,7 @@ DEBUG = True
 # DEBUG = False
 
 ALLOWED_HOSTS = ['*']
-
+BLACK_IPS = ['127.0.0.11']
 # Application definition
 # 防止windows系统下链接mysql出错
 import pymysql
@@ -64,10 +64,12 @@ INSTALLED_APPS = [
 	'rgc',
 	'debug_toolbar',  # 添加的
 	'memcache_toolbar',
+	'django.contrib.sitemaps',
 ]
 
 MIDDLEWARE = [
 	# 'django.middleware.cache.UpdateCacheMiddleware',
+	'djan.middleware.BlackIpMiddleware',
 	'debug_toolbar.middleware.DebugToolbarMiddleware',  # 添加的
 	'django.middleware.security.SecurityMiddleware',
 	'django.contrib.sessions.middleware.SessionMiddleware',
@@ -136,18 +138,18 @@ WSGI_APPLICATION = 'djan.wsgi.application'
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
 DATABASES = {
-	'default': {
-		'ENGINE': 'django.db.backends.sqlite3',
-		'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-	}
 	# 'default': {
-	#     'ENGINE': 'django.db.backends.mysql',
-	#     'NAME': 'djan',
-	#     'USER': 'root',
-	#     'PASSWORD': '',
-	#     'HOST': '127.0.0.1',
-	#     'PORT': '3306'
+	# 	'ENGINE': 'django.db.backends.sqlite3',
+	# 	'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 	# }
+	'default': {
+		'ENGINE': 'django.db.backends.mysql',
+		'NAME': 'djan',
+		'USER': 'root',
+		'PASSWORD': '',
+		'HOST': '127.0.0.1',
+		'PORT': '3306'
+	}
 }
 
 # Password validation
@@ -229,6 +231,10 @@ DEBUG_TOOLBAR_PANELS = [
 # 	},
 # }
 
+# https://blog.csdn.net/haeasringnar/article/details/82053714
+# https://blog.csdn.net/sinat_29699167/article/details/79690889
+# https://www.jb51.net/article/105563.htm
+# https://www.cnblogs.com/luohengstudy/p/6890395.html
 LOGGING = {
 	'version': 1,
 	'disable_existing_loggers': True,
@@ -286,11 +292,11 @@ LOGGING = {
 			'level': 'DEBUG',
 			'propagate': False
 		},
-		'django.request': {  # 这些名字不能随意写
-			'handlers': ['default', 'mail_admins'],
-			'level': 'DEBUG',
-			'propagate': True
-		},
+		# 'django.request': {  # 这些名字不能随意写
+		# 	'handlers': ['default', 'mail_admins'],
+		# 	'level': 'DEBUG',
+		# 	'propagate': True
+		# },
 	}
 }
 
