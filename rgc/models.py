@@ -6,6 +6,9 @@ class Many(models.Model):
 
 
 class Person(models.Model):
+	class Meta:
+		db_table = 'person'  # 添加表名
+
 	name = models.CharField(max_length=30)
 	age = models.IntegerField()
 	other = models.CharField(max_length=10, null=True)
