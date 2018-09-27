@@ -36,7 +36,7 @@ djcelery.setup_loader()
 
 BROKER_URL = 'redis://127.0.0.1:6379/5'
 CELERY_RESULT_BACKEND = 'redis://127.0.0.1:6379/4'
-
+CELERY_ACCEPT_CONTENT = ['pickle', 'json']
 ALLOWED_HOSTS = ['*']
 BLACK_IPS = ['127.0.0.11']
 # Application definition
