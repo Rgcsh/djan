@@ -167,8 +167,9 @@ def view_callback(sender, **kwargs):
 
 
 # celery的使用
+# https://www.cnblogs.com/znicy/p/5626040.html
 # 开启celery方式，控制台输入:python manage.py celery worker -c 4 --loglevel=info
-# 查询任务执行情况，控制台输入：python manage.py celery flower
+# 查询任务执行情况，控制台输入：python manage.py celery flower    ;浏览器输入 http://localhost:5555/ 查看
 def celery_test(request):
 	from rgc.tasks import task_job
 	task_info = {'name': 'rgc', 'age': 1}
