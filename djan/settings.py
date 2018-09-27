@@ -26,6 +26,17 @@ import memcache_toolbar.panels.memcache
 DEBUG = True
 # DEBUG = False
 
+
+# celery
+import djcelery
+
+djcelery.setup_loader()
+# BROKER_URL = 'amqp://guest@localhost//'
+# CELERY_RESULT_BACKEND = 'amqp://guest@localhost//'
+
+BROKER_URL = 'redis://127.0.0.1:6379/5'
+CELERY_RESULT_BACKEND = 'redis://127.0.0.1:6379/4'
+
 ALLOWED_HOSTS = ['*']
 BLACK_IPS = ['127.0.0.11']
 # Application definition
@@ -63,6 +74,7 @@ INSTALLED_APPS = [
 	'django.contrib.staticfiles',
 	'rgc',
 	'blog',
+	'djcelery',
 	'debug_toolbar',  # 添加的
 	'memcache_toolbar',
 	'django.contrib.sitemaps',
@@ -103,6 +115,17 @@ CACHES = {
 	'origin_redis': {  # 用于存储redis的业务常量值
 		'BACKEND': 'django_redis.cache.RedisCache',
 		'LOCATION': 'redis://127.0.0.1:6379/2',
+		'OPTIONS': {
+			'CLIENT_CLASS': 'django_redis.client.DefaultClient',
+			# 'CLIENT_CLASS': 'redis.client.Redis',
+			'PICKLE_VERISON': -1,  # 序列化版本
+			'SOCKET_CONNECT_TIMEOUT': 5,  # socket简历连接超时时间
+			'SOCKET_TIMEOUT': 5,  # 建立连接后的读写操作超时时间
+		}
+	},
+	'celery_redis': {  # 用于存储celery执行结果
+		'BACKEND': 'django_redis.cache.RedisCache',
+		'LOCATION': 'redis://127.0.0.1:6379/4',
 		'OPTIONS': {
 			'CLIENT_CLASS': 'django_redis.client.DefaultClient',
 			# 'CLIENT_CLASS': 'redis.client.Redis',

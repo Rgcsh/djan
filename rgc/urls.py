@@ -25,7 +25,7 @@ info_dict = {
 	'date_field': 'time',
 }
 from rgc.views import index, reg, new_reg, new_reg1, register, export, post, redis, cookie_random, \
-	cache_pub, cache_pri, create_signal
+	cache_pub, cache_pri, create_signal, celery_test, get_celery_result
 
 app_name = 'rgc'
 urlpatterns = [
@@ -36,6 +36,8 @@ urlpatterns = [
 	path('register/', register),
 	path('export/', export),
 	path('post/', post),
+	path('celery/', celery_test),
+	path('celery_result/', get_celery_result),
 	path('signal/', create_signal),
 	path('redis/', redis),  # redis缓存测试
 	path('cookie_random/', cookie_random),  # redis缓存测试

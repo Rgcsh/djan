@@ -1,3 +1,4 @@
+from celery.result import AsyncResult
 from django.core.cache import cache
 from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
 from django.shortcuts import render
@@ -5,9 +6,11 @@ from django.template.context_processors import csrf
 from django.urls import path
 from django.views.decorators.cache import cache_page, cache_control
 from django.views.decorators.clickjacking import xframe_options_exempt, xframe_options_deny
+import logging
+from django.views.decorators.cache import cache_control
 from django.views.decorators.vary import vary_on_headers
 from django_redis import get_redis_connection
-import logging
+
 from rgc.models.person import Person
 
 
@@ -20,10 +23,10 @@ def index(request):
 	print('dfdfdfs')
 	# print(urlpatterns)
 	# print(4/0)
-	# log = logging.getLogger('django.server')
-	# log.debug('welcome in to index!')
-	# log.error('welcome in to index!')
-	# log.warning('welcome in to index!')
+	log = logging.getLogger('django.server')
+	log.debug('welcome in to index!')
+	log.error('welcome in to index!')
+	log.warning('welcome in to index!')
 	# return render(request, "debug.html")
 	# log_one = logging.getLogger('admin')
 	# log_one.info('welcome in to index!!!')
@@ -161,3 +164,26 @@ def view_callback(sender, **kwargs):
 	print(sender)
 	print('处理信号！{}，{}'.format(kwargs['time'], kwargs['path']))
 	return 4 / 0
+
+
+# celery的使用
+# 开启celery方式，控制台输入:python manage.py celery worker -c 4 --loglevel=info
+# 查询任务执行情况，控制台输入：python manage.py celery flower
+def celery_test(request):
+	from rgc.tasks import task_job
+	task_info = {'name': 'rgc', 'age': 1}
+	# 向 celery添加任务
+	result = task_job.delay(task_info)
+	# result.id 指 此任务的id,在后面查询结果时会用到
+	return JsonResponse({'status': str(result.id)})
+
+
+# celery结果获取
+def get_celery_result(request):
+	# 任务id
+	id = request.GET['id']
+	# 获取 celery任务执行的结果及是否成功
+	result = AsyncResult(id)
+	# if result.state!='PENDING':
+	# 	result.forget()
+	return JsonResponse({'result': result.result, 'is_success': result.successful(), 'state': result.state})
