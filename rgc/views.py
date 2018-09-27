@@ -1,5 +1,5 @@
 from django.core.cache import cache
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
 from django.shortcuts import render
 from django.template.context_processors import csrf
 from django.urls import path
@@ -135,3 +135,29 @@ def cache_pri(request):
 	# patch_cache_control(response, private=True, max_age=10)
 	# print(response['Cache-Control'])
 	return response
+
+
+from django.dispatch import receiver
+import django.dispatch
+
+# 创建信号
+work_done_signal = django.dispatch.Signal(providing_args=['path', 'time'])
+
+
+# views函数
+def create_signal(request):
+	url_path = request.path
+	print('send signal!')
+	# 发送信号
+	result = work_done_signal.send_robust(create_signal, path=url_path, time='2019-01-01')
+	print(result[0][1])
+	return JsonResponse({'name': 'OK'})
+
+
+# 信号接收器
+@receiver(work_done_signal, sender=create_signal)
+def view_callback(sender, **kwargs):
+	# 处理函数
+	print(sender)
+	print('处理信号！{}，{}'.format(kwargs['time'], kwargs['path']))
+	return 4 / 0
