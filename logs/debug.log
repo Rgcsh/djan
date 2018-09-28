@@ -1,0 +1,2 @@
+2018-09-28 13:22:44,089 [Thread-3:5940] [django.request:228] [log:log_response] [WARNING]- Not Found: /
+2018-09-28 13:25:18,879 [Thread-3:13796] [django.request:228] [log:log_response] [WARNING]- Not Found: /
