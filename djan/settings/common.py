@@ -1,4 +1,5 @@
 import os
+#导入 dev环境的配置，每次导入不同环境时，更改此导入文件
 from djan.settings.dev import *
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -226,7 +227,7 @@ LOGGING = {
 	'loggers': {  # 日志记录器
 		'django': {
 			'handlers': ['default', 'console'],
-			'level': 'DEBUG',
+			'level': 'INFO',
 			'propagate': True
 		},
 		'django.server': {

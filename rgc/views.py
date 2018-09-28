@@ -182,9 +182,12 @@ def celery_test(request):
 # celery结果获取
 def get_celery_result(request):
 	# 任务id
-	id = request.GET['id']
-	# 获取 celery任务执行的结果及是否成功
-	result = AsyncResult(id)
-	# if result.state!='PENDING':
-	# 	result.forget()
-	return JsonResponse({'result': result.result, 'is_success': result.successful(), 'state': result.state})
+	if 'id' in request.GET.keys():
+		id = request.GET['id']
+		# 获取 celery任务执行的结果及是否成功
+		result = AsyncResult(id)
+		# if result.state!='PENDING':
+		# 	result.forget()
+		return JsonResponse({'result': result.result, 'is_success': result.successful(), 'state': result.state})
+	else:
+		return JsonResponse({'warn': 'please input id!!'})
