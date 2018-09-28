@@ -3,7 +3,7 @@ import json
 # 如下四行代码必须要，用来加载此项目的上下文
 import os
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'djan.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'djan.settings.common')
 import django
 
 django.setup()
@@ -11,7 +11,7 @@ django.setup()
 
 def main():
 	from rgc.models import Person
-	with open('../fixture_dir/one.json', encoding='utf8') as f:
+	with open('one.json', encoding='utf8') as f:
 		# 单行插入
 		for item in json.load(f):
 			item['fields'].pop('many')
